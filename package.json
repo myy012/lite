@@ -1,0 +1,55 @@
+{
+  "name": "lite",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start && node_modules/.bin/reactotron",
+    "test": "jest",
+    "bundle-ios": "node node_modules/react-native/local-cli/cli.js bundle --entry-file index.js  --platform ios --dev false --bundle-output ./ios/bundle/index.ios.jsbundle --assets-dest ./ios/bundle",
+    "bundle-android": "node node_modules/react-native/local-cli/cli.js bundle --entry-file index.js  --platform android --dev false --bundle-output ./ios/bundle/index.android.jsbundle --assets-dest ./android/bundle"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0-beta.38",
+    "Base64": "^1.0.1",
+    "axios": "^0.17.1",
+    "axios-retry": "^3.0.1",
+    "immutable": "^3.8.2",
+    "lodash": "^4.17.4",
+    "qs": "^6.5.1",
+    "react": "16.2.0",
+    "react-native": "0.52.0",
+    "react-native-svg": "^6.2.2",
+    "react-native-svg-uri": "^1.2.3",
+    "react-native-vector-icons": "^4.5.0",
+    "react-navigation": "^1.0.0-beta.26",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-immutable": "^4.0.0",
+    "redux-persist-immutable": "^4.3.1",
+    "redux-saga": "^0.16.0",
+    "standard": "^10.0.3"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "babel-jest": "22.0.6",
+    "babel-preset-react-native": "4.0.0",
+    "jest": "22.0.6",
+    "react-test-renderer": "16.2.0",
+    "reactotron": "^0.9.0",
+    "reactotron-react-native": "^1.14.0",
+    "reactotron-redux": "^1.13.0",
+    "reactotron-redux-saga": "^1.13.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "standard": {
+    "ignore": [
+      "android",
+      "ios",
+      "node_modules"
+    ],
+    "parser": "babel-eslint",
+    "globals": []
+  }
+}
